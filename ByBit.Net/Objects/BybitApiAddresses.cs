@@ -9,6 +9,11 @@
         /// The address used by the BybitClient for the Spot rest API
         /// </summary>
         public string SpotRestClientAddress { get; set; } = "";
+
+        /// <summary>
+        /// The address used by the BybitClient for the Copy Trading rest API
+        /// </summary>
+        public string CopyTradingRestClientAddress { get; set; } = "";
         /// <summary>
         /// The address used by the BybitSocketClient for the public Spot socket API
         /// </summary>
@@ -64,6 +69,7 @@
             InversePerpetualSocketClientAddress = "wss://stream.bybit.com/realtime",
             InverseFuturesRestClientAddress = "https://api.bybit.com",
             InverseFuturesSocketClientAddress = "wss://stream.bybit.com/realtime",
+            CopyTradingRestClientAddress = "https://api.bybit.com",
         };
 
         /// <summary>

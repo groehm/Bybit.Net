@@ -65,6 +65,16 @@ namespace Bybit.Net.Objects
             set => _spotApiOptions = new RestApiClientOptions(_spotApiOptions, value);
         }
 
+        private RestApiClientOptions _copyTradingApiOptions = new RestApiClientOptions(BybitApiAddresses.Default.SpotRestClientAddress);
+        /// <summary>
+        /// Copy trading API options
+        /// </summary>
+        public RestApiClientOptions CopyTradingApiOptions
+        {
+            get => _copyTradingApiOptions;
+            set => _copyTradingApiOptions = new RestApiClientOptions(_copyTradingApiOptions, value);
+        }
+
         /// <summary>
         /// ctor
         /// </summary>
