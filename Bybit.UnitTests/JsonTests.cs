@@ -204,12 +204,41 @@ namespace Bybit.Net.UnitTests
         }
 
         [Test]
+        public async Task ValidateCopyTradingAccountCalls()
+        {
+            await _comparer.ProcessSubject("CopyTrading/Account", c => c.CopyTradingApi.Account,
+                useNestedJsonPropertyForCompare: new Dictionary<string, string>
+                {
+                },
+                ignoreProperties: new Dictionary<string, List<string>>
+                {
+                },
+                useNestedJsonPropertyForAllCompare: new List<string> { "result" }
+                );
+        }
+
+        [Test]
         public async Task ValidateCopyTradingExchangeDataCalls()
         {
             await _comparer.ProcessSubject("CopyTrading/ExchangeData", c => c.CopyTradingApi.ExchangeData,
                 useNestedJsonPropertyForCompare: new Dictionary<string, string>
                 {
                     { "GetSymbolsAsync", "list" }
+                },
+                ignoreProperties: new Dictionary<string, List<string>>
+                {
+                },
+                useNestedJsonPropertyForAllCompare: new List<string> { "result" }
+                );
+        }
+
+        [Test]
+        public async Task ValidateCopyTradingTradingCalls()
+        {
+            await _comparer.ProcessSubject("CopyTrading/Trading", c => c.CopyTradingApi.Trading,
+                useNestedJsonPropertyForCompare: new Dictionary<string, string>
+                {
+                    { "GetPositionsAsync", "list" }
                 },
                 ignoreProperties: new Dictionary<string, List<string>>
                 {
