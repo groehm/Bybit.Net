@@ -53,6 +53,10 @@
         /// The address used by the BybitSocketClient for the Inverse futures socket API
         /// </summary>
         public string InverseFuturesSocketClientAddress { get; set; } = "";
+        /// <summary>
+        /// The address used by the BybitSocketClient for the Inverse futures socket API
+        /// </summary>
+        public string CopyTradingSocketClientAddress { get; set; } = "";
 
         /// <summary>
         /// The default addresses to connect to the Bybit.com API
@@ -70,6 +74,7 @@
             InverseFuturesRestClientAddress = "https://api.bybit.com",
             InverseFuturesSocketClientAddress = "wss://stream.bybit.com/realtime",
             CopyTradingRestClientAddress = "https://api.bybit.com",
+            CopyTradingSocketClientAddress = "wss://stream.bybit.com/realtime_private",
         };
 
         /// <summary>

@@ -1,7 +1,7 @@
 ﻿using Bybit.Net.Converters;
 using Bybit.Net.Enums;
 using Bybit.Net.Interfaces.Clients.CopyTradingApi;
-using Bybit.Net.Objects.Models;
+using Bybit.Net.Objects.Models.CopyTrading;
 using CryptoExchange.Net;
 using CryptoExchange.Net.Objects;
 using Newtonsoft.Json;
@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace Bybit.Net.Clients.CopyTradingApi
 {
+    /// <inheritdoc />
     public class BybitClientCopyTradingApiTrading : IBybitClientCopyTradingApiTrading
     {
         private BybitClientCopyTradingApi _baseClient;

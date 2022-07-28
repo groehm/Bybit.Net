@@ -155,6 +155,16 @@ namespace Bybit.Net.Objects
             set => _spotStreamsOptions = new BybitSocketApiClientOptions(_spotStreamsOptions, value);
         }
 
+        private BybitSocketApiClientOptions _copyTradingStreamsOptions = new BybitSocketApiClientOptions(BybitApiAddresses.Default.CopyTradingSocketClientAddress, BybitApiAddresses.Default.CopyTradingSocketClientAddress);
+        /// <summary>
+        /// Copy trading streams options
+        /// </summary>
+        public BybitSocketApiClientOptions CopyTradingStreamsOptions
+        {
+            get => _copyTradingStreamsOptions;
+            set => _copyTradingStreamsOptions = new BybitSocketApiClientOptions(_copyTradingStreamsOptions, value);
+        }
+
         /// <summary>
         /// Interval at which to send a ping to the server
         /// </summary>

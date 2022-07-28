@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace Bybit.Net.Objects.Models
+namespace Bybit.Net.Objects.Models.CopyTrading
 {
     /// <summary>
-    /// Balance info
+    /// Balance update
     /// </summary>
-    public class BybitCopyTradingBalance
+    public class BybitCopyTradingBalanceUpdate
     {
         /// <summary>
         /// Asset
@@ -55,6 +55,6 @@ namespace Bybit.Net.Objects.Models
         /// Total realized profit and loss
         /// </summary>
         [JsonProperty("cumRealisedPnl")]
-        public decimal TotalRealizedPnl { get; set; }        
+        public decimal TotalRealizedPnl { get; set; }
     }
 }

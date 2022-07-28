@@ -4,12 +4,12 @@ using CryptoExchange.Net.Converters;
 using Newtonsoft.Json;
 using System;
 
-namespace Bybit.Net.Objects.Models
+namespace Bybit.Net.Objects.Models.CopyTrading
 {
     /// <summary>
     /// Copy trading order info
     /// </summary>
-    public class BybitCopyTradingOrder
+    public class BybitCopyTradingOrderUpdate
     {
         /// <summary>
         /// Order id
@@ -22,12 +22,18 @@ namespace Bybit.Net.Objects.Models
         /// <summary>
         /// Client order id
         /// </summary>
-        public string ClientOrderId { get; set; } = string.Empty;
+        [JsonProperty("orderLinkId")]
+        public string? ClientOrderId { get; set; }
         /// <summary>
         /// Order side
         /// </summary>
         [JsonConverter(typeof(OrderSideConverter))]
         public OrderSide Side { get; set; }
+        /// <summary>
+        /// Order type
+        /// </summary>
+        [JsonConverter(typeof(OrderTypeConverter))]
+        public OrderType OrderType { get; set; }
         /// <summary>
         /// Copy trade order status
         /// </summary>
@@ -37,33 +43,20 @@ namespace Bybit.Net.Objects.Models
         /// </summary>
         public decimal Price { get; set; }
         /// <summary>
-        /// Order quantity
+        /// Transaction quantity
         /// </summary>
         [JsonProperty("qty")]
         public decimal Quantity { get; set; }
+        /// <summary>
+        /// Executed quantity
+        /// </summary>
+        [JsonProperty("cumExecQty")]
+        public decimal QuantityExecuted { get; set; }
         /// <summary>
         /// Time in force
         /// </summary>
         [JsonConverter(typeof(TimeInForceConverter))]
         public TimeInForce TimeInForce { get; set; }
-        /// <summary>
-        /// Remaining quantity
-        /// </summary>
-        [JsonProperty("leavesQty")]
-        public decimal QuanitityRemaining { get; set; }
-        /// <summary>
-        /// Is isolated
-        /// </summary>
-        public bool IsIsolated { get; set; }
-        /// <summary>
-        /// Remaining value
-        /// </summary>
-        [JsonProperty("leavesValue")]
-        public decimal ValueRemaining { get; set; }
-        /// <summary>
-        /// Leverage
-        /// </summary>
-        public decimal Leverage { get; set; }
         /// <summary>
         /// Value filled
         /// </summary>
@@ -86,5 +79,16 @@ namespace Bybit.Net.Objects.Models
         [JsonConverter(typeof(DateTimeConverter))]
         [JsonProperty("updatedTime")]
         public DateTime UpdateTime { get; set; }
+        /// <summary>
+        /// Last executed fill price
+        /// </summary>
+        [JsonProperty("lastExecPrice")]
+        public decimal LastFillPrice { get; set; }
+        /// <summary>
+        /// Last executed fill price
+        /// </summary>
+        [JsonProperty("positionIdx")]
+        [JsonConverter(typeof(PositionModeConverter))]
+        public PositionMode PositionMode { get; set; }
     }
 }

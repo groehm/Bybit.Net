@@ -1,5 +1,5 @@
 ﻿using Bybit.Net.Enums;
-using Bybit.Net.Objects.Models;
+using Bybit.Net.Objects.Models.CopyTrading;
 using CryptoExchange.Net.Objects;
 using System.Threading;
 using System.Threading.Tasks;

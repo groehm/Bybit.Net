@@ -4,7 +4,7 @@ using CryptoExchange.Net.Converters;
 using Newtonsoft.Json;
 using System;
 
-namespace Bybit.Net.Objects.Models
+namespace Bybit.Net.Objects.Models.CopyTrading
 {
     /// <summary>
     /// Position info
@@ -18,6 +18,7 @@ namespace Bybit.Net.Objects.Models
         /// <summary>
         /// Side
         /// </summary>
+        [JsonConverter(typeof(OrderSideConverter))]
         public OrderSide Side { get; set; }
         /// <summary>
         /// Position quantity

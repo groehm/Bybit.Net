@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bybit.Net.Objects.Models
+namespace Bybit.Net.Objects.Models.CopyTrading
 {
     /// <summary>
     /// Copy trading symbol

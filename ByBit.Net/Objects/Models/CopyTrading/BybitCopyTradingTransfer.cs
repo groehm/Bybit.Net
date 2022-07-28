@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Bybit.Net.Objects.Models
+namespace Bybit.Net.Objects.Models.CopyTrading
 {
     /// <summary>
     /// Transfer id

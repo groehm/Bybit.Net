@@ -1,5 +1,5 @@
 ﻿using Bybit.Net.Interfaces.Clients.CopyTradingApi;
-using Bybit.Net.Objects.Models;
+using Bybit.Net.Objects.Models.CopyTrading;
 using CryptoExchange.Net.Objects;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Bybit.Net.Clients.CopyTradingApi
 {
+    /// <inheritdoc />
     public class BybitClientCopyTradingApiExchangeData : IBybitClientCopyTradingApiExchangeData
     {
         private BybitClientCopyTradingApi _baseClient;
