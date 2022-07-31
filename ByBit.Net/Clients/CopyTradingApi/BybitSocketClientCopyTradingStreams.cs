@@ -59,8 +59,8 @@ namespace Bybit.Net.Clients.InversePerpetualApi
 
                 handler(data.As(desResult.Data));
             });
-            return await _baseClient.SubscribeInternalAsync(this, _options.InversePerpetualStreamsOptions.BaseAddressAuthenticated,
-                new BybitFuturesRequestMessage() { Operation = "subscribe", Parameters = new[] { "position" } },
+            return await _baseClient.SubscribeInternalAsync(this, _options.CopyTradingStreamsOptions.BaseAddressAuthenticated,
+                new BybitFuturesRequestMessage() { Operation = "subscribe", Parameters = new[] { "copyTradePosition" } },
                 null, true, internalHandler, ct).ConfigureAwait(false);
         }
 

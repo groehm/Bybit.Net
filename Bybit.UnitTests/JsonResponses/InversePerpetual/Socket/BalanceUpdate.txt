@@ -1,7 +1,7 @@
-{
-  "topic":"copyTradeWallet",
-    "data":{
-    "walletBalance":"14009.12164704",
-      "availableBalance":"13998.97749271"
-  }
-}
+[
+        {
+            "coin": "BTC",
+            "available_balance": "1.50121026",
+            "wallet_balance": "1.50121261"
+        }
+    ]
