@@ -76,6 +76,10 @@ namespace Bybit.Net.Objects.Models.Socket
         /// Position mode
         /// </summary>
         [JsonProperty("position_idx"), JsonConverter(typeof(PositionModeConverter))]
-        public PositionMode? PositionMode { get; set; }
+        public PositionMode? PositionMode { get; set; }        
+        [JsonProperty("take_profit")]
+        public decimal? TakeProfit { get; set; }
+        [JsonProperty("stop_loss")]
+        public decimal? StopLoss { get; set; }        
     }
 }
